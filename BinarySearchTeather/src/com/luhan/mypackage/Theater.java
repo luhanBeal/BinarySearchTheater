@@ -58,6 +58,7 @@ public class Theater {
         public boolean reserve() {
             if (!this.reserved) {
                 System.out.println("Seat " + seatNumber + " reserved.");
+                this.reserved = true;
                 return true;
             } else {
                 return false;
