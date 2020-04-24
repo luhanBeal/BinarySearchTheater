@@ -6,10 +6,12 @@ import java.util.List;
 
 public class Theater {
     private final String theaterName;
+    private double price;
     private List<Seat> seats= new ArrayList<>();
 
-    public Theater(String theaterName, int numRows, int seatPerRows) {
+    public Theater(String theaterName, int numRows, int seatPerRows, double p) {
         this.theaterName = theaterName;
+        this.price = p;
 
         int lastRow = 'A' + (numRows -1);
         for (char row = 'A'; row <= lastRow; row++) {
@@ -23,6 +25,10 @@ public class Theater {
 
     public String getTheaterName() {
         return theaterName;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     public boolean reserveSeat(String seatNumber) {
